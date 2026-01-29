@@ -1,52 +1,117 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>
+      Frontend Mentor | Newsletter sign-up form with success message
+    </title>
 
-  <!-- Sign-up form start -->
+    <link
+      rel="preload"
+      href="/assets/fonts/Roboto-Bold.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
 
-  Stay updated!
+    <link
+      rel="preload"
+      href="/assets/fonts/Roboto-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
 
-  Join 60,000+ product managers receiving monthly updates on:
+    <link rel="preload" href="/styles.css" as="style" />
+    <link rel="stylesheet" href="/styles.css" />
 
-  Product discovery and building what matters
-  Measuring to ensure updates are a success
-  And much more!
+    <script defer></script>
+  </head>
+  <body>
+    <main class="container">
+      <picture>
+        <source
+          media="(min-width: 90rem)"
+          srcset="/assets/images/illustration-sign-up-desktop.svg"
+        />
+        <source
+          media="(min-width: 48rem)"
+          srcset="/assets/images/illustration-sign-up-tablet.svg"
+        />
+        <img src="/assets/images/illustration-sign-up-mobile.svg" alt="" />
+      </picture>
+      <!-- Sign-up form start -->
 
-  Email address
-  email@company.com
+      <div class="info">
+        <div class="info__container">
+          <h1 class="info__title text-blue-800">Stay updated!</h1>
 
-  Subscribe to monthly newsletter
+          <p class="info__text text-blue-800">
+            Join 60,000+ product managers receiving monthly updates on:
+          </p>
 
-  <!-- Sign-up form end -->
+          <ul class="info__list text-blue-800">
+            <li class="info__item">
+              Product discovery and building what matters
+            </li>
 
-  <!-- Success message start -->
+            <li class="info__item">
+              Measuring to ensure updates are a success
+            </li>
 
-  Thanks for subscribing!
+            <li class="info__item">And much more!</li>
+          </ul>
+        </div>
 
-  A confirmation email has been sent to ash@loremcompany.com. 
-  Please open it and click the button inside to confirm your subscription.
+        <form class="form">
+          <div class="form__field">
+            <label class="form__label text-blue-800" for="email"
+              >Email address</label
+            >
 
-  Dismiss message
+            <input
+              class="form__input"
+              autocomplete="email"
+              id="email"
+              placeholder="email@company.com"
+              type="email"
+              required
+            />
+          </div>
 
-  <!-- Success message end -->
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+          <button class="form__button" type="submit">
+            Subscribe to monthly newsletter
+          </button>
+        </form>
+      </div>
+
+      <!-- Sign-up form end -->
+
+      <!-- Success message start -->
+
+      <!-- Thanks for subscribing! A confirmation email has been sent to
+      ash@loremcompany.com. Please open it and click the button inside to
+      confirm your subscription. Dismiss message -->
+
+      <!-- Success message end -->
+    </main>
+
+    <footer class="attribution">
+      <p>
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Julio Anccasi</a>.
+      </p>
+    </footer>
+  </body>
 </html>
