@@ -186,7 +186,20 @@ body {
   padding: 1rem 1.5rem;
   border: 1px solid $grey;
   border-radius: 0.5rem;
+  outline: none;
   @extend %text-preset-2-regular;
+}
+
+.form__input:focus {
+  border: 1px solid $blue-800;
+  color: $blue-800;
+  caret-color: $blue-800;
+}
+
+@media (min-width: 90rem) {
+  .gradient {
+    background: linear-gradient(to right, #ff6a3a, #ff527b);
+  }
 }
 
 .form__button {
