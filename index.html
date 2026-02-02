@@ -72,11 +72,17 @@
           </ul>
         </div>
 
-        <form id="form" class="form">
+        <form id="form" class="form" novalidate>
           <div class="form__field">
-            <label class="form__label text-blue-800" for="email"
-              >Email address</label
-            >
+            <div>
+              <label class="form__label text-blue-800" for="email"
+                >Email address</label
+              >
+
+              <p id="errorMessage" class="error__message">
+                Valid email required
+              </p>
+            </div>
 
             <input
               class="form__input"

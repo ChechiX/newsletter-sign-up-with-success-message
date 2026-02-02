@@ -176,10 +176,25 @@ body {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+
+  div {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .form__label {
   @extend %text-preset-3;
+}
+
+.error__message {
+  @extend %text-preset-3;
+  color: $red;
+  display: none;
+}
+
+.error__message--active {
+  display: block;
 }
 
 .form__input {
@@ -194,6 +209,12 @@ body {
   border: 1px solid $blue-800;
   color: $blue-800;
   caret-color: $blue-800;
+}
+
+.input__error {
+  border: 1px solid $red;
+  color: $red;
+  background-color: #ffe7e6;
 }
 
 @media (min-width: 90rem) {
