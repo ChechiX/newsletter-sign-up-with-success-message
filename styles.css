@@ -12,19 +12,19 @@
   font-weight: 700;
   src: url("./assets/fonts/Roboto-Bold.woff2") format("woff2");
 }
-.info__title {
+.success-message__title, .info__title {
   font-family: "Roboto Bold";
   font-size: clamp(2.5rem, 1.5458rem + 4.0712vw, 3.5rem);
   line-height: 1;
 }
 
-.form__button {
+.success-message__button, .success-message__email, .form__button {
   font-family: "Roboto Bold";
   font-size: 1rem;
   line-height: 1.5;
 }
 
-.form__input, .info__list, .info__text {
+.success-message__text, .form__input, .info__list, .info__text {
   font-family: "Roboto Regular";
   font-size: 1rem;
   line-height: 1.5;
@@ -58,6 +58,7 @@ img {
 
 body,
 h1,
+h2,
 p,
 ul {
   margin: 0;
@@ -68,10 +69,10 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-height: 100dvh;
 }
 @media (min-width: 48rem) {
   body {
-    min-height: 100dvh;
     justify-content: center;
   }
 }
@@ -87,6 +88,7 @@ body {
   .container {
     padding: 2.5rem 2.5rem;
     border-radius: 2.25rem;
+    box-shadow: 0px 15px 60px 0px rgba(0, 0, 0, 0.25);
   }
 }
 @media (min-width: 90rem) {
@@ -213,6 +215,63 @@ body {
   color: #ffffff;
 }
 
+.success-message {
+  min-height: 100dvh;
+  background-color: #ffffff;
+  padding: 9.3125rem 1.5rem 4.375rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.success-message div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+}
+@media (min-width: 48rem) {
+  .success-message {
+    padding: 4rem 4rem;
+    min-height: 32.5rem;
+    max-width: 31.5rem;
+    border-radius: 2.25rem;
+    gap: 2rem;
+    box-shadow: 0px 15px 60px 0px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.success-message__title {
+  color: #242742;
+}
+
+.success-message__text {
+  color: #242742;
+}
+
+.success-message__email {
+  color: #242742;
+}
+
+.success-message__button {
+  align-self: stretch;
+  background-color: #242742;
+  color: #ffffff;
+  padding: 1rem 0;
+  border-radius: 0.5rem;
+  border: none;
+  transition: background 0.5s ease, box-shadow 0.5s ease;
+}
+
+@media (min-width: 90rem) {
+  .success-message__button:hover {
+    background: linear-gradient(to right, #ff6a3a, #ff527b);
+    box-shadow: 0px 16px 32px 0px rgba(255, 97, 85, 0.5);
+  }
+}
 .attribution {
   font-size: 11px;
   text-align: center;

@@ -67,6 +67,7 @@ img {
 
 body,
 h1,
+h2,
 p,
 ul {
   margin: 0;
@@ -77,9 +78,9 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-height: 100dvh;
 
   @media (min-width: 48rem) {
-    min-height: 100dvh;
     justify-content: center;
   }
 }
@@ -94,6 +95,7 @@ body {
   @media (min-width: 48rem) {
     padding: 2.5rem 2.5rem;
     border-radius: 2.25rem;
+    box-shadow: 0px 15px 60px 0px rgba($color: #000000, $alpha: 0.25);
   }
 
   @media (min-width: 90rem) {
@@ -230,6 +232,70 @@ body {
   border: none;
   @extend %text-preset-2-bold;
   color: $white;
+}
+
+.success-message {
+  min-height: 100dvh;
+  background-color: $white;
+  padding: 9.3125rem 1.5rem 4.375rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  @media (min-width: 48rem) {
+    padding: 4rem 4rem;
+    min-height: 32.5rem;
+    max-width: 31.5rem;
+    border-radius: 2.25rem;
+    gap: 2rem;
+    box-shadow: 0px 15px 60px 0px rgba($color: #000000, $alpha: 0.25);
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.success-message__title {
+  @extend %text-preset-1;
+  color: $blue-800;
+}
+
+.success-message__text {
+  @extend %text-preset-2-regular;
+  color: $blue-800;
+}
+
+.success-message__email {
+  @extend %text-preset-2-bold;
+  color: $blue-800;
+}
+
+.success-message__button {
+  align-self: stretch;
+  background-color: $blue-800;
+  color: $white;
+  padding: 1rem 0;
+  border-radius: 0.5rem;
+  border: none;
+  @extend %text-preset-2-bold;
+  transition:
+    background 0.5s ease,
+    box-shadow 0.5s ease;
+}
+
+@media (min-width: 90rem) {
+  .success-message__button:hover {
+    background: linear-gradient(to right, #ff6a3a, #ff527b);
+    box-shadow: 0px 16px 32px 0px rgba($color: #ff6155, $alpha: 0.5);
+  }
 }
 
 .attribution {
